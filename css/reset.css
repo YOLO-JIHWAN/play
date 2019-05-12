@@ -1,0 +1,100 @@
+/*
+
+.______    __           ___      ____    ____                      __    ______    __    __  .__   __. .__   __.  __   _______
+|   _  \  |  |         /   \     \   \  /   /                     |  |  /  __  \  |  |  |  | |  \ |  | |  \ |  | |  | |   ____|
+|  |_)  | |  |        /  ^  \     \   \/   /      ______          |  | |  |  |  | |  |__|  | |   \|  | |   \|  | |  | |  |__
+|   ___/  |  |       /  /_\  \     \_    _/      |______|   .--.  |  | |  |  |  | |   __   | |  . `  | |  . `  | |  | |   __|
+|  |      |  `----. /  _____  \      |  |                   |  `--'  | |  `--'  | |  |  |  | |  |\   | |  |\   | |  | |  |____
+| _|      |_______|/__/     \__\     |__|                    \______/   \______/  |__|  |__| |__| \__| |__| \__| |__| |_______|
+
+Code by johnnie 2019-01-13
+
+*/
+/* reset */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, textarea, p, span, strong, a, blockquote, table, thead, tbody, tfoot, tr, th, td, input, label, select, textarea, button, img, article, aside, canvas, section, header, footer, main, audio, video, iframe, nav, address, figure, figcaption {margin:0; padding:0}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block} /* HTML5 for Old browser */
+fieldset, img {border:0}
+
+table {border-collapse:collapse; border-spacing:0}
+dl, ul, ol, menu, li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {content:""; content:none}
+input, select, textarea, button {vertical-align:middle}
+button, input[type="button"] {border:0; background-color:transparent; cursor:pointer}
+
+body {line-height:1}
+body, th,td, input, select, textarea, button {font-size:12px; font-family:'돋움', dotum, sans-serif; color:#333}
+a {color:inherit; text-decoration:none}
+a:active, a:hover {text-decoration:none}
+address, caption, cite, code, dfn, em, var {font-style:normal; font-weight:normal}
+
+ @media (max-width:599px) {
+/* reset */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, textarea, p, span, strong, a, blockquote, table, thead, tbody, tfoot, tr, th, td, input, label, select, textarea, button, img, article, aside, canvas, section, header, footer, main, audio, video, iframe, nav, address, figure, figcaption {margin:0; padding:0}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block} /* HTML5 for Old browser */
+fieldset, img {border:0}
+
+table {border-collapse:collapse; border-spacing:0}
+dl, ul, ol, menu, li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {content:""; content:none}
+input, select, textarea, button {vertical-align:middle}
+button, input[type="button"] {border:0; background-color:transparent; cursor:pointer}
+body {line-height:1; word-break:break-all; -webkit-text-size-adjust:none} /* 폰트 자동확대 방지 */
+body, th,td, input, select, textarea, button {font-size:14px; font-family:'돋움', dotum, sans-serif; color:#333}
+a {color:inherit; text-decoration:none}
+a:active, a:hover {text-decoration:none}
+address, caption, cite, code, dfn, em, var {font-style:normal; font-weight:normal}
+
+}
+/* 
+[code-explain(코드설명)]
+	<applet>, <object> : 웹페이지에 자바 애플릿을 삽입할 때 사용, HTML5에서는 applet은 사용되지 않는다
+	<aside> : 페이지 전체 내용과는 어느정도 관련성이 있지만, 주요 내용과는 직접적인 연관성은 없는 분리된 내용을 담는 태그
+	<blockquout> : 인용문을 사용할 때 쓰는 태그
+	<pre> : 입력하는 그대로 보여주는 태그 / <br> 태그 등 없이도 줄바꿈이 가능함
+	<abbr> : 약자, 약어를 설명하는 태그 (생략어)
+	<acronym> : 약자, 약어를 설명하는 태그 (두문자어)
+		생략어는 스펠링을 한자씩 발음하고, 두문자어는 한 단어처럼 발음한다는 차이가 있습니다.
+	<big> : 텍스트를 한 단계 더 크게 만들어주는 태그
+	<cite> : 작품의 제목을 표시하는 태그
+	<code> : 컴퓨터 코드를 표시하는 태그
+		XML요소 이름, 파일 이름, 컴퓨터 프로그램등 컴퓨터가 인식할수 있는 일련의 컴퓨터 코드를 나타냅니다
+	<del> : 문서로부터 삭제되었음을 알리는 태그 (default : text-decoration:line-through)
+		속성 - datetime : 삭제된 시간 명시
+	<dfn> : 텍스트를 전문용어나 관용구등의 정의어로 지정하는 태그 / 대부분의 브라우저에서 이탤릭체로 표현됩니다
+	<em> : 내용을 강조하는 태그 
+		-em을 중첩하면 중첩할 수록 중요함을 나타냅니다
+		-i요소와 strong요소와는 구별되는데 em요소가 강조라면 i요소는 문단의 다른 부분과 조금 다른 어조임을 나타내며, strong요소는 	 해당 내용이 중요함을 나타냅니다
+		-대부분의 브라우저에서 이탤릭체로 표시됩니다
+	<ins> : 문서에 추가된 것을 표시하는 태그 (defalut : text-decoration:underline)
+	<kbd> : 키보드 입력을 정의하는 HTML 태그
+		-태그의 용도를 나타낼 뿐, 그 자체의 기능은 없음
+	<q> : 짧은 인용문을 표현할 때 쓰는 태그
+	<s> : 더 이상 정확하지 않거나 관련 없는 내용을 나타내는 태그
+		-예를들어 판매 가격이 변경되었으므로 기존 가격이 관계없음을 나타낼때 사용됩니다.
+		-del요소(텍스트가 문서로부터 제거됨을 나타내는 요소)와는 구별해서 사용해야 합니다.
+	<samp> : 프로그램 또는 스크립트의 출력예를 표시해주는 태그
+	<small> : 글자를 작게 표시하는 태그
+	<strike> : del태그와 같은 기능을 하는 태그 HTML5에서는 없다
+	<sub> : 텍스트를 아랫첨자로 표기하는 태그
+	<sup> : 텍스트를 윗첨자로 표기하는 태그
+	<tt> : 텔레타이프 텍스트를 위한 태그 (폰트 : monospace 기능)
+	<var> : 수학적 표현이나 프로그래밍 문맥에서의 변수를 나타내는 태그
+	<u> : 텍스트에 밑줄을 긋는 태그
+	<i> : 텍스트를 이탤릭체로 표현하는 태그
+	<center> : 텍스트를 중앙정렬 해주는 태그, HTML5에선 쓰지 않는다
+	<dl> : dl요소의 용어-설명 그룹에서 설명, 정의, 값을 나타내는 태그
+	<fieldset> : form태그 양식에서 관계된 요소들끼리 묶어주는 역할을 하며 관계 주위에 박스를 그리는 태그
+	<legend> : fieldset태그의 제목(caption)태그
+	<figure> : 일러스트, 다이어그램, 사진, 코드등에 주석을 다는 용도로 사용되는 태그
+	<figcaption> : 부모요소인 figure요소의 내용들에 대한 캡션, 혹은 제목을 나타내는 태그
+	<hgroup> : h1,h2,...등 heading 태그를 묶어주는 태그
+	<output> : 계산의 결과를 나타내는 태그
+	<ruby> : 한자, 일어등의 발음등을 표기하기위해 사용하며 <rp>와 <rt>를 사용한다.5.5pt의 작은 글씨를 사용해 첨언을 넣는 영국 				출판문화에서 기원한 단어
+	<summary> : 부모요소인 details요소의 내용에 대한 요약이나 캡션등을 나타내는 태그
+	<details> : 추가적인 정보를 나타내거나 사용자가 요청하는 정보를 나타내는 태그
+	<mark> : 하나의 문서 내에서 다른 문맥과의 관련성을 나타내기 위해서 참조 목적으로 마킹되거나 하이라이트된 텍스트를 표현하는 태그
+	*/

@@ -104,3 +104,12 @@ if(mode) {
 if(save) {
 	save.addEventListener("click" , saveImage);
 }
+
+var active = document.getElementsByClassName('jsColor');
+for(var i = 0; i < active.length; i++) {
+	active[i].addEventListener("click", function() {
+		var current = document.getElementsByClassName("on");
+		current[0].className = current[0].className.replace(" on", "");
+		this.className += " on";
+	});
+}

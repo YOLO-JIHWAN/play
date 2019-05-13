@@ -3,10 +3,18 @@ body {display:flex; flex-direction:column; align-items:center; padding-top:50px;
 .canvas {width:700px; height:700px; background:#fff; border-radius:30px; box-shadow:3px 3px 7px 1px rgba(0,0,0,0.5)}
 .drawing_tools {display:flex; flex-direction:column; align-items:center}
 .drawing_tools > * {padding-top:30px}
+.drawing_tools .brush h3 {position:relative; padding-bottom:25px; text-align:center; line-height:1.5rem; font-size:1.2rem}
+.drawing_tools .brush h3:after {position:absolute; top:25px; left:calc(50% - 4px); content:""; display:block; width:8px; height:8px; border-top:2px solid #222; border-right:2px solid #222; -webkit-transform:rotate(135deg); transform:rotate(135deg)}
+.drawing_tools .brush h3 span {margin-left:10px}
 .drawing_tools .mode {display:flex}
 .drawing_tools .mode li {padding:0 5px}
 .drawing_tools .mode button {padding:5px 7px; background:#f6f9fc; border-radius:5px; font-size:16px; font-weight:800; text-transform:uppercase; box-shadow:1px 1px 3px 1px rgba(0,0,0,0.5)}
 .drawing_tools .colors {display:flex}
 .drawing_tools .colors li {padding:5px}
+.drawing_tools .colors li.html5Picker {margin-right:20px}
 .drawing_tools .colors li button {width:50px; height:50px; border-radius:50%; box-shadow:2px 2px 5px 1px rgba(0,0,0,0.5); text-indent:-9999px}
 .drawing_tools .colors li button.on {border:2px solid rgb(38, 146, 247)}
+#rgbColor {position:relative; width:50px; height:50px; box-shadow:3px 3px 7px 1px rgba(0, 0, 0, 0.5); border:none; border-radius:100%; -webkit-appearance:none; outline:none}
+#rgbColor::-webkit-color-swatch-wrapper {padding:0}
+#rgbColor::-webkit-color-swatch {border:none; border-radius:100%}
+#rgbColor:after {position:absolute; top:calc(50% - 13px); left:calc(50% - 24.5px); content:"Color Picker"; display:block; color:#fff; text-align:center}

@@ -3,7 +3,9 @@ const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("brushRange");
 const mode = document.getElementById("jsFill");
-const save = document.getElementById("jsSave");
+const save_img = document.getElementById("jsSave");
+const reset = document.getElementById("jsReset");
+const rgb = document.getElementById("rgbColor");
 
 const INITIAL_COLOR = "#151515";
 const CANVAS_SIZE = 700;
@@ -48,10 +50,19 @@ function pickColor(evt) {
 	ctx.fillStyle = color;
 }
 
+function colorPicker(evt) {
+	var variableColor = document.getElementById("rgbColor").value;
+	console.log(variableColor);
+	ctx.strokeStyle = variableColor;
+	ctx.fillStyle = variableColor;
+}
+
 //brush width change
 function changeBrush(evt) {
+	var brush_size = document.getElementById("brushSize");
 	const size = evt.target.value;
 	ctx.lineWidth = size;
+	brush_size.innerText = size;
 }
 
 function drawingMode() {
@@ -77,9 +88,14 @@ function preventRightClick(evt) {
 function saveImage() {
 	const image = canvas.toDataURL(); //defalut - png
 	const link = document.createElement("a");
-	link.href = imgae;
+	link.href = image;
 	link.download = "DrawingImage🎨[Export]";
 	link.click();
+}
+
+function drawingReset() {
+	ctx.fillStyle = "#fff";
+	ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 }
 
 if(canvas) {
@@ -93,6 +109,8 @@ if(canvas) {
 
 Array.from(colors).forEach(color => color.addEventListener("click", pickColor));
 
+
+
 if(range) {
 	range.addEventListener("input", changeBrush);
 }
@@ -101,8 +119,16 @@ if(mode) {
 	mode.addEventListener("click", drawingMode);
 }
 
-if(save) {
-	save.addEventListener("click" , saveImage);
+if(save_img) {
+	save_img.addEventListener("click" , saveImage);
+}
+
+if(reset) {
+	reset.addEventListener("click", drawingReset);
+}
+
+if(rgb) {
+	rgb.addEventListener("change", colorPicker);
 }
 
 var active = document.getElementsByClassName('jsColor');

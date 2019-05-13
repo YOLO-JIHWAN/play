@@ -89,7 +89,7 @@ function saveImage() {
 	const image = canvas.toDataURL(); //defalut - png
 	const link = document.createElement("a");
 	link.href = image;
-	link.download = "DrawingImage🎨[Export]";
+	link.download = "DrawingImage🎨";
 	link.click();
 }
 

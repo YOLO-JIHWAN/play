@@ -43,17 +43,19 @@ function onMouseMove(evt) {
 	}
 }
 
-function onTouchMove(evt){
-	const x = evt.offsetX;
-	const y = evt.offsetY;
+function onTouchMove(evt) {
+	const mobileX = evt.touches[0].pageX - evt.touches[0].target.offsetLeft;
+	const mobileY = evt.touches[0].pageY - evt.touches[0].target.offsetTop;
+	console.log(mobileX, mobileY);
 	if(!drawing) {
 		ctx.beginPath();
-		ctx.moveTo(x, y);
+		ctx.moveTo(mobileX, mobileY);
 	} else {
-		ctx.lineTo(x, y);
+		ctx.lineTo(mobileX, mobileY);
 		ctx.stroke();
 	}
 }
+
 
 //pickcolor(change color)
 function pickColor(evt) {

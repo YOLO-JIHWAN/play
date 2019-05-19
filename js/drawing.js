@@ -1,3 +1,6 @@
+var canvasWidth = document.getElementById("drawingCanvas").offsetWidth;
+var canvasHeight = document.getElementById("drawingCanvas").style.height = canvasWidth;
+
 const canvas = document.getElementById("drawingCanvas");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
@@ -6,9 +9,10 @@ const mode = document.getElementById("jsFill");
 const save_img = document.getElementById("jsSave");
 const reset = document.getElementById("jsReset");
 const rgb = document.getElementById("rgbColor");
+const cursor = document.getElementById("jsPointer");
 
 const INITIAL_COLOR = "#151515";
-const CANVAS_SIZE = 700;
+const CANVAS_SIZE = canvasWidth;
 
 //cavas size justice
 canvas.width = CANVAS_SIZE;
@@ -34,6 +38,7 @@ function startDrawing() {
 function onMouseMove(evt) {
 	const x = evt.offsetX;
 	const y = evt.offsetY;
+	// cursor.setAttribute("style", "top: "+(evt.pageY - 10)+"px; left: "+(evt.pageX - 10)+"px;");
 	if(!drawing) {
 		ctx.beginPath();
 		ctx.moveTo(x, y);
@@ -66,7 +71,6 @@ function pickColor(evt) {
 
 function colorPicker(evt) {
 	var variableColor = document.getElementById("rgbColor").value;
-	console.log(variableColor);
 	ctx.strokeStyle = variableColor;
 	ctx.fillStyle = variableColor;
 }

@@ -8,56 +8,62 @@
 	<title>Drawing Board</title>
 </head>
 <body>
-	<canvas id="drawingCanvas" class="canvas"></canvas>
-	<article class="drawing_tools">
-		<div class="brush">
-			<h3>Brush Size<span id="brushSize">2.5</span></h3>
-			<input type="range" id="brushRange" min="0.1" max="5.0" value="2.5" step="0.1">
-		</div>
-		<ul class="mode">
-			<li>
-				<button type="button" id="jsFill">Fill</button>
-			</li>
-			<li>
-				<button type="button" id="jsReset">Reset</button>
-			</li>
-			<li>
-				<button type="button" id="jsSave">Save</button>
-			</li>
-		</ul>
-		<ul class="colors">
-			<li class="html5Picker">
-				<input type="color" name="inputColor" id="rgbColor" value="#ffb54c">
-			</li>
-			<li>
-				<button type="button" style="background:#151515" class="jsColor on">Black</button>
-			</li>
-			<li>
-				<button type="button" style="background:#fff" class="jsColor">White</button>
-			</li>
-			<li>
-				<button type="button" style="background:#ff0000" class="jsColor">Red</button>
-			</li>
-			<li>
-				<button type="button" style="background:#ff8000" class="jsColor">Orange</button>
-			</li>
-			<li>
-				<button type="button" style="background:#ffff00" class="jsColor">Yellow</button>
-			</li>
-			<li>
-				<button type="button" style="background:#31B404" class="jsColor">Green</button>
-			</li>
-			<li>
-				<button type="button" style="background:#0040FF" class="jsColor">Blue</button>
-			</li>
-			<li>
-				<button type="button" style="background:#08088A" class="jsColor">Navy</button>
-			</li>
-			<li>
-				<button type="button" style="background:#7401DF" class="jsColor">Purple</button>
-			</li>
-		</ul>
-	</article>
+	<div id="wrap">
+		<canvas id="drawingCanvas" class="canvas"></canvas>
+		<!-- <h1 id="jsPointer"></h1> -->
+		<article class="drawing_tools">
+			<div class="brush">
+				<h3>Brush Size<span id="brushSize">2.5</span></h3>
+				<input type="range" id="brushRange" min="0.1" max="5.0" value="2.5" step="0.1">
+			</div>
+			<ul class="mode">
+				<li>
+					<button type="button" id="jsFill">Fill</button>
+				</li>
+				<li>
+					<button type="button" id="jsReset">Reset</button>
+				</li>
+				<li>
+					<button type="button" id="jsSave">Save</button>
+				</li>
+			</ul>
+			<ul class="colors">
+				<li class="html5Picker">
+					<input type="color" name="inputColor" id="rgbColor" value="#ffb54c" class="jsColor">
+				</li>
+				<li>
+					<button type="button" style="background:#151515" class="jsColor on">Black</button>
+				</li>
+				<li>
+					<button type="button" style="background:#fff" class="jsColor">White</button>
+				</li>
+				<li>
+					<button type="button" style="background:#ff0000" class="jsColor">Red</button>
+				</li>
+				<li>
+					<button type="button" style="background:#ff8000" class="jsColor">Orange</button>
+				</li>
+				<li>
+					<button type="button" style="background:#ffff00" class="jsColor">Yellow</button>
+				</li>
+				<li>
+					<button type="button" style="background:#31B404" class="jsColor">Green</button>
+				</li>
+				<li>
+					<button type="button" style="background:#0040FF" class="jsColor">Blue</button>
+				</li>
+				<li>
+					<button type="button" style="background:#08088A" class="jsColor">Navy</button>
+				</li>
+				<li>
+					<button type="button" style="background:#7401DF" class="jsColor">Purple</button>
+				</li>
+			</ul>
+		</article>
+		<footer>
+			Copyright JOHNNIE 2019
+		</footer>
+	</div>
 	<script src="../js/drawing.js"></script>
 </body>
 </html>

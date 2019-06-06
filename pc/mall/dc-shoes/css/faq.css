@@ -1,0 +1,275 @@
+#wrap{
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+}
+#event_banner>img{
+    width: 100%;
+}
+#faq_box{
+    width: 100%;
+    margin-bottom: 50px;
+}
+#faq_t{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#faq_t>img{
+    width: 100%;
+}
+#faq_search{
+    width: 77%;
+    margin: 0 auto;
+}
+#search_blank{
+    width: 55%;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+}
+#search_but{
+    width: 20%;
+    background-color: black;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    float: left;
+}
+#often_faq{
+    width: 100%;
+/*    background-color: aqua;*/
+    margin-bottom: 50px;
+}
+#often_t{
+    width: 100%;
+    height: 15%;
+/*    margin-bottom: 30px;*/
+/*    background-color: red;*/
+}
+#often_t>img{
+    width: 100%;
+}
+#often_list{
+    width: 77%;
+    height: 80%;
+    margin: 0 auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding-top: 1.5%;
+}
+#often_list>li{
+    font-size: 24px;
+    margin-bottom: 3%;
+}
+#often_list>li:hover>a{
+    color: red;
+}
+#icon_box{
+    width: 77%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.icon_list{
+    width: 100%;
+}
+.icon_list>li{
+    width: 25%;
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.icon_list>li>img{
+    width: 100%;
+}
+.icon_list>li:hover{
+    border: 5px solid black;
+}
+#company{
+    width: 91.43%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+#company>img{
+    width: 100%;
+}
+#footer{
+    width: 100%;
+    height: 250px;
+}
+#footer_top{
+    
+    width: 100%;
+    height: 40%;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+}
+#footer_top>li{
+    width:33.3%;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+#footer_top>li>img{
+    position: absolute;
+    bottom: 0;
+    width: 15.43%;
+    margin-left: 12%;
+    float: left;
+}
+.footbut{
+    width: 40%;
+    height: 40%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    left: 40%;
+    top: 50%;
+    position: absolute;
+    line-height: 40px;
+}
+.footbut>a{
+    font-size: 20px;
+    font-weight: 900;
+}
+#footer_bot{
+    width: 100%;
+    margin-left: 12%:
+}
+#footer_bot>li{
+    float: left;
+    margin-right: 5%;
+    margin-left: 7%;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.8;
+}
+#logo{    
+    margin-left: 8.28%;    
+    float: left;
+}
+#logo img{
+    width: 100%;
+}
+#menu{
+    float: left;
+    width: 64%;
+    height: 100%;
+    margin-left: 5%;
+}
+#menu>li{
+    float: left;
+}
+.main_menu{
+    height: 100%;
+    text-align: center;
+    margin-right: 6.336%;
+    transition-duration: 0.5s;
+}
+.main_menu:first-child{
+    width: 8.73%;
+}
+.main_menu:nth-child(2){
+ width: 14.06%;   
+}
+.main_menu:nth-child(3){
+    width: 21%;
+}
+.main_menu:nth-child(4){
+    width: 7.51%;
+}
+.main_menu:nth-child(5){
+    width: 8.66%;
+}
+.main_menu:last-child{
+    width: 8.36%;
+    margin-right: 0;
+}
+.main_menu>a{
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+}
+.sub_menu{
+    width: 500px;
+    height: 0;
+    overflow: hidden;
+    background-color:cornsilk;
+    transition-duration: 0.5s;
+}
+.sub_menu>li{
+    height: 50px;
+    text-align: center;
+}
+.sub_menu>li>a{
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+.main_menu:hover>a{
+    color:burlywood;
+}
+.sub_menu>a{
+    color: black;
+}
+.main_menu:first-child:hover>#sub_mens{
+    width: 300%;
+    height: 300px;    
+}
+.sub_menu>li:hover{
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+.main_menu:nth-child(2):hover>#sub_womens{
+    width: 200%;
+    height: 150px;    
+}
+.main_menu:nth-child(3):hover>#sub_acc{
+    width: 100%;
+    height: 250px;    
+}
+.main_menu:nth-child(4):hover>#sub_sale{
+    width: 170%;
+    height: 150px;    
+}
+.main_menu:nth-child(5):hover>#sub_team{
+    width: 200%;
+    height: 50px;    
+}
+.sub_menu>li:hover>a{
+    color:coral;
+}
+#tab_menu{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url(../images/tab/tab_back.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tab_menu_box{
+    width: 55%;
+    height: 100%;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+#tab_menu_box>li{
+    width: 100%;
+    height: 7%;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+#tab_menu_box>li img{
+    width: 65%;
+}

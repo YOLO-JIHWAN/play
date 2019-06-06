@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>전국플라워센터-회원검색</title>
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/contents.css">
+	<link rel="stylesheet" href="/css/popup.css">
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="/index.html">
+						<img src="/images/logo.png" alt="전국플라워센터">
+					</a>
+				</h1>
+				<button type="button" onclick="history.back();" class="btn prev">이전 페이지로 이동</button>
+				<button type="button" onclick="unb_click();" class="btn unb">사용자 메뉴</button>
+			</div>
+		</header>
+		<aside class="unb layer" style="display:none">
+			<div class="inner">
+				<h2 class="ir">사용자 메뉴 목록</h2>
+				<ul>
+					<li class="home">
+						<a href="#">로그아웃</a>
+					</li>
+					<li class="pc">
+						<a href="#">PC 버전</a>
+					</li>
+					<li class="notice">
+						<a href="#">공지사항</a>
+					</li>
+					<li class="head">
+						<a href="#">본부 전화</a>
+					</li>
+				</ul>
+				<article class="app_down">
+					<a href="#">
+						<strong>모바일 앱 설치하기</strong>
+						<img src="/images/ico_app.png" alt="전국플라워센터 모바일 앱 설치">
+						APP을 설치하시면 자동으로<br>수주할당을 받으실 수 있습니다.<br>(희망배송지 주변 기준)
+					</a>
+				</article>
+				<button type="button" onclick="unb_click();" class="btn close">사용자 메뉴 닫기</button>
+			</div>
+			<div class="overlay"></div>
+		</aside>
+		<div id="container" class="member">
+			<h3 class="tit">회원 검색</h3>
+			<form name="" action="" method="">
+				<fieldset>
+					<legend>회원검색</legend>
+					<div class="items_wrap mem_search">
+						<div class="option clear">
+							<label class="city">
+								<input type="radio" name="option" value="">서울특별시<span class="ico down_arrow"></span>
+							</label>
+							<label class="jiyok">
+								<input type="radio" name="option" value="">금천구<span class="ico down_arrow"></span>
+							</label>
+						</div>
+						<ul class="option_list clear city" style="display:none">
+							<li class="on">
+								<button type="button">서울특별시</button>
+							</li>
+							<li>
+								<button type="button">경기도</button>
+							</li>
+							<li>
+								<button type="button">인천광역시</button>
+							</li>
+							<li>
+								<button type="button">부산광역시</button>
+							</li>
+							<li>
+								<button type="button">대구광역시</button>
+							</li>
+							<li>
+								<button type="button">광주광역시</button>
+							</li>
+							<li>
+								<button type="button">대전광역시</button>
+							</li>
+							<li>
+								<button type="button">울산광역시</button>
+							</li>
+							<li>
+								<button type="button">세종특별시</button>
+							</li>
+							<li>
+								<button type="button">강원도</button>
+							</li>
+							<li>
+								<button type="button">경상남도</button>
+							</li>
+							<li>
+								<button type="button">경상북도</button>
+							</li>
+							<li>
+								<button type="button">전라남도</button>
+							</li>
+							<li>
+								<button type="button">전라북도</button>
+							</li>
+							<li>
+								<button type="button">충청남도</button>
+							</li>
+							<li>
+								<button type="button">충청북도</button>
+							</li>
+							<li>
+								<button type="button">제주도</button>
+							</li>
+							<li></li>
+						</ul>
+						<ul class="option_list clear jiyok" style="display:none">
+							<li class="on">
+								<button type="button">전체</button>
+							</li>
+							<li>
+								<button type="button">강남구</button>
+							</li>
+							<li>
+								<button type="button">강동구</button>
+							</li>
+							<li>
+								<button type="button">강북구</button>
+							</li>
+							<li>
+								<button type="button">강서구</button>
+							</li>
+							<li>
+								<button type="button">관악구</button>
+							</li>
+							<li>
+								<button type="button">광진구</button>
+							</li>
+							<li>
+								<button type="button">구로구</button>
+							</li>
+							<li>
+								<button type="button">금천구</button>
+							</li>
+							<li>
+								<button type="button">노원구</button>
+							</li>
+							<li>
+								<button type="button">도봉구</button>
+							</li>
+							<li>
+								<button type="button">동대문구</button>
+							</li>
+							<li>
+								<button type="button">동작구</button>
+							</li>
+							<li>
+								<button type="button">마포구</button>
+							</li>
+							<li>
+								<button type="button">서대문구</button>
+							</li>
+							<li>
+								<button type="button">서초구</button>
+							</li>
+							<li>
+								<button type="button">성동구</button>
+							</li>
+							<li>
+								<button type="button">성북구</button>
+							</li>
+							<li>
+								<button type="button">송파구</button>
+							</li>
+							<li>
+								<button type="button">양천구</button>
+							</li>
+							<li>
+								<button type="button">영등포구</button>
+							</li>
+							<li>
+								<button type="button">용산구</button>
+							</li>
+							<li>
+								<button type="button">은평구</button>
+							</li>
+							<li>
+								<button type="button">종로구</button>
+							</li>
+							<li>
+								<button type="button">중구</button>
+							</li>
+							<li>
+								<button type="button">중량구</button>
+							</li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="items_wrap search_cdn mt07">
+						<div class="clear">
+							<article class="select_wrap">
+								<select title="검색분류">
+									<option value="">상호명</option>
+									<option value="">배송지주소</option>
+									<option value="">대표자명</option>
+								</select>
+							</article>
+							<div class="search_wrap fr">
+								<input type="text" name="" value="" placeholder="테스트">
+								<button type="button" class="btn search">검색</button>
+							</div>
+						</div>
+						<div class="map mt07">
+							<img src="/images/map_example.png" alt="지도api 미리보기">
+						</div>
+					</div>
+					<div class="mt07 member_list">
+						<ul>
+							<li class="items_wrap">
+								<div>
+									<p class="name clear">1. 홍길동플라워 (강남구 개봉동)
+										<a href="member_info.html" target="_blank" class="ico member">회원정보</a>
+									</p>
+									<table summary="동양란, 서양란, 관엽, 축하, 근초, 꽃">
+										<colgroup>
+											<col width="31%" span="2">
+											<col width="*">
+										</colgroup>
+										<tr>
+											<td class="txt_green">동양란(o) 100%</td>
+											<td class="txt_green">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+										<tr>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+									</table>
+									<button type="button" class="btn choice">선택</button>
+								</div>
+							</li>
+							<li class="items_wrap">
+								<div>
+									<p class="name clear">1. 홍길동플라워 (강남구 개봉동)
+										<a href="member_info.html" target="_blank" class="ico member">회원정보</a>
+									</p>
+									<table summary="동양란, 서양란, 관엽, 축하, 근초, 꽃">
+										<colgroup>
+											<col width="31%" span="2">
+											<col width="*">
+										</colgroup>
+										<tr>
+											<td class="txt_green">동양란(o) 100%</td>
+											<td class="txt_green">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+										<tr>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+									</table>
+									<button type="button" class="btn choice">선택</button>
+								</div>
+							</li>
+							<li class="items_wrap">
+								<div>
+									<p class="name clear">1. 홍길동플라워 (강남구 개봉동)
+										<a href="member_info.html" target="_blank" class="ico member">회원정보</a>
+									</p>
+									<table summary="동양란, 서양란, 관엽, 축하, 근초, 꽃">
+										<colgroup>
+											<col width="31%" span="2">
+											<col width="*">
+										</colgroup>
+										<tr>
+											<td class="txt_green">동양란(o) 100%</td>
+											<td class="txt_green">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+										<tr>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+											<td class="txt_red">동양란(o) 60%</td>
+										</tr>
+									</table>
+									<button type="button" class="btn choice">선택</button>
+								</div>
+							</li>
+						</ul>
+						<!-- <div class="dim">※ 현재 검색된 회원이 없습니다</div> -->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>전국플라워센터-발주</title>
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/contents.css">
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="/index.html">
+						<img src="/images/logo.png" alt="전국플라워센터">
+					</a>
+				</h1>
+				<button type="button" onclick="history.back();" class="btn prev">이전 페이지로 이동</button>
+				<button type="button" onclick="unb_click();" class="btn unb">사용자 메뉴</button>
+			</div>
+
+			<article class="menu">
+				<!--
+				/* 비활성화시 */
+				<ul>
+					<li class="home"><a href="#"><span>홈</span></a></li>
+					<li class="balju_list"><a href="#"><span>발주리스트</span></a></li>
+					<li class="suju_list"><a href="#"><span>수주리스트</span></a></li>
+					<li class="balju"><a href="#"><span>발주</span></a></li>
+				</ul>
+
+				/* 활성화시 */
+				<ul>
+					<li class="home"><strong title="현재메뉴"><span>홈</span></strong></li>
+					<li class="balju_list"><strong title="현재메뉴"><span>발주리스트</span></strong></li>
+					<li class="suju_list"><strong title="현재메뉴"><span>수주리스트</span></strong></li>
+					<li class="balju"><strong title="현재메뉴"><span>발주</span></strong></li>
+				</ul>
+				-->
+				<ul>
+					<li class="home">
+						<a href="/index.html"><span>홈</span></a>
+					</li>
+					<li class="balju_list">
+						<a href="balju_list.html"><span>발주리스트</span></a>
+					</li>
+					<li class="suju_list">
+						<a href="/suju/suju_list.html"><span>수주리스트</span></a>
+					</li>
+					<li class="balju">
+						<strong title="현재메뉴"><span>발주</span></strong>
+					</li>
+				</ul>
+			</article>
+		</header>
+		<aside class="unb layer" style="display:none">
+			<div class="inner">
+				<h2 class="ir">사용자 메뉴 목록</h2>
+				<ul>
+					<li class="home">
+						<a href="#">로그아웃</a>
+					</li>
+					<li class="pc">
+						<a href="#">PC 버전</a>
+					</li>
+					<li class="notice">
+						<a href="#">공지사항</a>
+					</li>
+					<li class="head">
+						<a href="#">본부 전화</a>
+					</li>
+				</ul>
+				<article class="app_down">
+					<a href="#">
+						<strong>모바일 앱 설치하기</strong>
+						<img src="/images/ico_app.png" alt="전국플라워센터 모바일 앱 설치">
+						APP을 설치하시면 자동으로<br>수주할당을 받으실 수 있습니다.<br>(희망배송지 주변 기준)
+					</a>
+				</article>
+				<button type="button" onclick="unb_click();" class="btn close">사용자 메뉴 닫기</button>
+			</div>
+			<div class="overlay"></div>
+		</aside>
+		<div id="container">
+			<ul class="tab v2">
+				<li class="tab_link on">
+					<button type="button" onclick="openTab(event, 'product_info');">상품정보</button>
+				</li>
+				<li class="tab_link">
+					<button type="button" onclick="openTab(event, 'shipping_info');">배송정보</button>
+				</li>
+				<li class="tab_link">
+					<button type="button" onclick="openTab(event, 'message');">메세지</button>
+				</li>
+				<div class="tab_slider">현재메뉴 표시</div>
+			</ul>
+			<div id="product_info" class="tab_con product_info" style="display:block">
+				<form name="" action="" method="">
+					<fieldset>
+						<legend>발주</legend>
+						<h3 class="tit">수발주정보</h3>
+						<table summary="발주구분, 본부, 회원간, 수주회원, 회원검색" class="subalju_info">
+							<colgroup>
+								<col width="33.3007%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">발주구분</th>
+									<td>
+										<label class="bonbu">
+											<input type="radio" name="balju" value="" checked="checked"> 본부
+										</label>
+										<label class="mem">
+											<input type="radio" name="balju" value=""> 회원간
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">수주회원</th>
+									<td class="suju_mem">
+										<p class="bonbu" style="display:block">[본부] 전국플라워센터</p>
+										<p class="mem" style="display:none">
+											<a href="/popup/member_search.html" target="_blank" class="btn basic">회원검색</a>
+											<span>홍길동플라워홍길동플라워</span>
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3 class="tit">발주상품</h3>
+						<div class="items_wrap balju_pdt">
+							<article class="select_wrap">
+								<select name="" title="상품분류" class="select">
+									<option value="" selected="selected">분류</option>
+									<option value="">축하3단</option>
+									<option value="">근조3단</option>
+								</select>
+							</article>
+							<div class="mt09 clear">
+								<input type="text" name="" value="" placeholder="상품명">
+								<div class="quantity clear">
+									<button type="button" class="minus">-</button>
+									<input type="text" name="" value="1">
+									<button type="button" class="plus">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="items_wrap amount mt07">
+							<h4 class="ir">원청금액</h4>
+							<div class="clear">
+								<input type="text" name="" value="" title="원청금액" placeholder="원청금액 (옵션제외)">
+								<span class="price"><strong>십만</strong> 원</span>
+								<!-- input[type="text"]에 값이 들어가면 display:block -->
+								<strong class="option_txt" style="display:block">원청금액<br><span>(옵션졔외)</span></strong>
+							</div>
+							<div class="mt09 pdt_amount">
+								<button type="button" class="btn basic">10만</button>
+								<button type="button" class="btn basic">5만</button>
+								<button type="button" class="btn basic">1만</button>
+								<button type="button" class="btn basic">5천</button>
+								<button type="button" class="btn basic">정정</button>
+							</div>
+						</div>
+						<div class="items_wrap amount mt07">
+								<h4 class="ir">결제금액</h4>
+							<div class="clear">
+								<input type="text" name="" value="" title="결제금액" placeholder="결제금액 (옵션제외)">
+								<span class="price"><strong></strong> 원</span>
+								<strong class="option_txt" style="display:none">결제금액<br><span>(옵션졔외)</span></strong>
+							</div>
+							<div class="mt09 pdt_amount">
+								<button type="button" class="btn basic">10만</button>
+								<button type="button" class="btn basic">5만</button>
+								<button type="button" class="btn basic">1만</button>
+								<button type="button" class="btn basic">5천</button>
+								<button type="button" class="btn basic">정정</button>
+							</div>
+						</div>
+						<div class="items_wrap mt07">
+							<h4 class="ir">옵션</h4>
+							<div class="option clear">
+								<label>
+									<input type="radio" name="option" value="" class="has">옵션 있음<span class="ico down_arrow"></span>
+								</label>
+								<label>
+									<input type="radio" name="option" value="" class="none">옵션 없음
+								</label>
+							</div>
+							<ul class="option_list" style="display:none">
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+								<li>
+									<label class="chk">
+										<input type="checkbox" name="" value=""> 케이크
+									</label>
+									<input type="text" name="" value="">
+									<span>삼만 원</span>
+								</li>
+							</ul>
+						</div>
+						<div class="items_wrap mt07 total">
+							<strong class="title">총결제금액<br><span>(옵션포함)</span></strong>
+							<input type="text" name="" value="" title="총결제금액" placeholder="0" class="txt_red">
+							<span class="price"><strong class="txt_red">십만</strong> 원</span>
+						</div>
+						<div class="items_wrap img_search mt07">
+							<span class="ico dica">이미지검색</span>
+							<a href="/popup/product_image.html" target="_blank" class="btn basic">이미지검색</a>
+							<!--
+							<label class="btn basic">
+								<input type="file" name=""> 이미지검색
+							</label>
+							-->
+							<input type="text" readonly="readonly" placeholder="상품이미지URL">
+							<!-- 이미지가 등록되었을시 display:block -->
+							<div class="img_preview" style="display:none">
+								<img src="#" alt="상품이미지 preview" id="imgPreview" style="display:block">
+								<button type="button" class="btn close">닫기</button>
+							</div>
+						</div>
+						<div class="items_wrap check mt07">
+							<!-- 개발자 참고용
+							발주 상품정보 값이 입력이 완성되지 않았을 시
+							<button type="button" class="btn move">
+								<span class="ico triangle"></span>다음
+							</button>
+							발주 상품정보 값이 입력이 완성되었을 시
+							<button type="button" class="btn move blue">
+								<span class="ico triangle"></span>다음
+							</button>
+							 -->
+							<button type="button" class="btn move">
+								<span class="ico triangle"></span>다음
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div id="shipping_info" class="tab_con shipping_info">
+				<form name="" action="" method="">
+					<fieldset>
+						<legend>배송정보</legend>
+						<h3 class="tit">주문자 정보</h3>
+						<div class="table_wrap">
+							<table summary="주문자, 전화번호, 핸드폰 번호">
+								<caption>주문자 정보</caption>
+								<colgroup>
+									<col width="12.1681%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt">주문자</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="주문자" placeholder="주문자">
+										</td>
+									</tr>
+									<tr>
+										<td style="height:10.5px"></td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt tel">전화번호</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="전화번호" placeholder="02-1111-1111">
+										</td>
+									</tr>
+									<tr>
+										<td style="height:10.5px"></td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt h_tel">핸드폰</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="핸드폰" placeholder="핸드폰">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3 class="tit">배송지 정보</h3>
+						<div class="table_wrap">
+							<table summary="배송일시">
+								<caption>배송지 정보</caption>
+								<colgroup>
+									<col width="12.1681%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt date">배송일시</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" placeholder="배송일시" class="datepicker">
+										</td>
+									</tr>
+									<tr>
+										<td style="height:10.5px"></td>
+									</tr>
+									<tr>
+										<th scope="row" class="vt">
+											<span class="ico balju_pdt time">배송시간</span>
+										</th>
+										<td>
+											<div class="clear">
+												<article class="select_wrap">
+													<select title="배송시간">
+														<option value="">지금즉시배송</option>
+														<option value="">직접입력</option>
+														<option value="">08시</option>
+														<option value="">09시</option>
+														<option value="">10시</option>
+														<option value="">11시</option>
+														<option value="">12시</option>
+														<option value="">13시</option>
+														<option value="">14시</option>
+														<option value="">15시</option>
+														<option value="">16시</option>
+														<option value="">17시</option>
+														<option value="">18시</option>
+														<option value="">19시</option>
+														<option value="">20시</option>
+														<option value="">21시</option>
+														<option value="">22시</option>
+													</select>
+												</article>
+												<article class="select_wrap" style="display:none">
+													<select title="분 선택"  class="small bl0 br0">
+														<option value="">00분</option>
+														<option value="">10분</option>
+														<option value="">20분</option>
+														<option value="">30분</option>
+														<option value="">40분</option>
+														<option value="">50분</option>
+													</select>
+												</article>
+												<article class="select_wrap" style="display:none">
+													<select title="때 선택" class="small">
+														<option value="">까지</option>
+														<option value="">예식</option>
+														<option value="">행사</option>
+													</select>
+												</article>
+											</div>
+											<input type="text" name="" value="" title="배송시간 직접입력" placeholder="직접입력" style="display:none; margin-top:10.5px">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table_wrap mt07">
+							<table summary="배송장소">
+								<caption>배송지 정보</caption>
+								<colgroup>
+									<col width="12.1681%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="vt">
+											<span class="ico balju_pdt delivery">배송지</span>
+										</th>
+										<td>
+											<button type="button" class="btn basic">우편번호</button>
+											<input type="text" name="" value="" title="배송지 주소" placeholder="배송지 주소" style="margin-top:10.5px">
+											<input type="text" name="" value="" title="상세주소" placeholder="상세주소" style="margin-top:10.5px">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table_wrap mt07">
+							<table summary="받는분, 받는분 전화, 받는분 핸드폰 번호">
+								<caption>받는분 정보</caption>
+								<colgroup>
+									<col width="12.1681%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt receive">받는분</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="받는분" placeholder="받는분">
+										</td>
+									</tr>
+									<tr>
+										<td style="height:10.5px"></td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt tel">전화번호</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="전화번호" placeholder="02-1111-1111">
+										</td>
+									</tr>
+									<tr>
+										<td style="height:10.5px"></td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<span class="ico balju_pdt h_tel">핸드폰</span>
+										</th>
+										<td>
+											<input type="text" name="" value="" title="핸드폰" placeholder="핸드폰">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="paging items_wrap check mt07">
+							<button type="button" class="btn move prev v2">이전<span class="ico triangle"></span></button>
+							<button type="button" class="btn move next v2"><span class="ico triangle"></span>다음</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div id="message" class="tab_con message">
+				<form name="" action="" method="">
+					<fieldset>
+						<legend>메세지</legend>
+						<h3 class="tit">메세지정보</h3>
+						<div class="items_wrap">
+							<div class="clear">
+								<strong class="sub_tit">경조사어</strong>
+								<div class="fr">
+									<a href="#" class="btn basic">자주쓰는 문구</a>
+									<a href="#" class="btn basic">선택</a>
+								</div>
+							</div>
+							<input type="text" name="" value="" title="경조사어 (리본)" placeholder="경조사어 (리본)" class="w100 mt09">
+						</div>
+						<div class="items_wrap mt07">
+							<div class="clear">
+								<strong class="sub_tit">보내는분</strong>
+								<div class="fr">
+									<a href="#" class="btn basic">자주쓰는 문구</a>
+									<a href="#" class="btn basic">선택</a>
+								</div>
+							</div>
+							<input type="text" name="" value="" title="보내는분 (리본)" placeholder="보내는분  (리본)" class="w100 mt09">
+						</div>
+						<div class="items_wrap mt07">
+							<div class="clear">
+								<strong class="sub_tit">카드메세지</strong>
+								<a href="#" class="btn basic fr">선택</a>
+							</div>
+							<textarea name="" rows="5" cols="10" title="카드메세지" placeholder="내용 입력" class="w100 mt09"></textarea>
+						</div>
+						<h3 class="tit">부가정보</h3>
+						<div class="items_wrap">
+							<div class="clear">
+								<strong class="sub_tit">요구사항</strong>
+								<a href="#" class="btn basic fr">선택</a>
+							</div>
+							<textarea name="" rows="5" cols="10" title="카드메세지" placeholder="내용 입력" class="w100 mt09"></textarea>
+						</div>
+						<div class="items_wrap mt07">
+							<table summary="안심번호, 해피콜, 디카">
+								<caption>부가정보</caption>
+								<colgroup>
+									<col width="">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">안심번호</th>
+										<td>
+											<label class="chk v2">
+												<input type="checkbox" name="" value=""> 주문자 신청
+											</label>
+											<label class="chk v2">
+												<input type="checkbox" name="" value=""> 받는분 신청
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">해피콜</th>
+										<td>
+											<label class="chk v2">
+												<input type="checkbox" name="" value=""> 요청
+											</label>
+											( <label class="chk v2">
+												<input type="checkbox" name="" value=""> 배송사진 url 추가)
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">디카</th>
+										<td>
+											<label class="chk v2">
+												<input type="checkbox" name="" value=""> 요청
+											</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="items_wrap mt07 clear">
+							<strong class="sub_tit">주문입력자</strong>
+							<input type="text" name="" value="" title="주문입력자" class="fr" style="width:70.1327%">
+						</div>
+						<div class="paging items_wrap check mt07">
+							<button type="button" class="btn move prev v2">이전<span class="ico triangle"></span></button>
+							<button type="button" class="btn move red v2">발주</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/common.js"></script>
+</body>
+</html>

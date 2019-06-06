@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>전국플라워센터</title>
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/contents.css">
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="/index.html">
+						<img src="/images/logo.png" alt="전국플라워센터">
+					</a>
+				</h1>
+				<button type="button" onclick="history.back();" class="btn prev">이전 페이지로 이동</button>
+				<button type="button" onclick="unb_click();" class="btn unb">사용자 메뉴</button>
+			</div>
+
+			<article class="menu">
+				<!--
+				/* 비활성화시 */
+				<ul>
+					<li class="home"><a href="#"><span>홈</span></a></li>
+					<li class="balju_list"><a href="#"><span>발주리스트</span></a></li>
+					<li class="suju_list"><a href="#"><span>수주리스트</span></a></li>
+					<li class="balju"><a href="#"><span>발주</span></a></li>
+				</ul>
+
+				/* 활성화시 */
+				<ul>
+					<li class="home"><strong title="현재메뉴"><span>홈</span></strong></li>
+					<li class="balju_list"><strong title="현재메뉴"><span>발주리스트</span></strong></li>
+					<li class="suju_list"><strong title="현재메뉴"><span>수주리스트</span></strong></li>
+					<li class="balju"><strong title="현재메뉴"><span>발주</span></strong></li>
+				</ul>
+				-->
+				<ul>
+					<li class="home">
+						<a href="/index.html"><span>홈</span></strong>
+					</li>
+					<li class="balju_list">
+						<a href="/balju/balju_list.html"><span>발주리스트</span></a>
+					</li>
+					<li class="suju_list">
+						<a href="/suju/suju_list.html"><span>수주리스트</span></a>
+					</li>
+					<li class="balju">
+						<a href="/balju/balju.html"><span>발주</span></a>
+					</li>
+				</ul>
+			</article>
+		</header>
+		<aside class="unb layer" style="display:none">
+			<div class="inner">
+				<h2 class="ir">사용자 메뉴 목록</h2>
+				<ul>
+					<li class="home">
+						<a href="#">로그아웃</a>
+					</li>
+					<li class="pc">
+						<a href="#">PC 버전</a>
+					</li>
+					<li class="notice">
+						<a href="#">공지사항</a>
+					</li>
+					<li class="head">
+						<a href="#">본부 전화</a>
+					</li>
+				</ul>
+				<article class="app_down">
+					<a href="#">
+						<strong>모바일 앱 설치하기</strong>
+						<img src="/images/ico_app.png" alt="전국플라워센터 모바일 앱 설치">
+						APP을 설치하시면 자동으로<br>수주할당을 받으실 수 있습니다.<br>(희망배송지 주변 기준)
+					</a>
+				</article>
+				<button type="button" onclick="unb_click();" class="btn close">사용자 메뉴 닫기</button>
+			</div>
+			<div class="overlay"></div>
+		</aside>
+		<!-- 공지사항 -->
+		<div id="container" class="main">
+			<h2 class="tit">공지사항</h2>
+			<ul class="list">
+				<!-- 개발자 참고용
+				<li>
+					<button type="button">
+						<p>공지사항 제목</p>
+						<span>(공지사항 게시 날짜)2018.04.24<span class="ico down_arrow">공지사항 내용보기</span></span>
+					</button>
+					<div class="list_con" style="display:block">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>공지사항 내용</p>
+					</div>
+				</li>
+				-->
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+				<li class="lists">
+					<button type="button">
+						<p>중국산 수입국화 판매 안내</p>
+						<span>2018. 04. 24<span title="공지사항 내용보기" class="ico down_arrow"></span></span>
+					</button>
+					<div class="list_con">
+						<img src="/images/bg_notice_image.png" alt="공지사항 내용 이미지" style="display:block">
+						<p>
+							2018년 9월 ~2019년 3월 말까지 매주 1회 정기로 배송됩니다. 
+							정기배송을 희망하시는 회원사는 본사로 연락부탁드립니다.
+							감사합니다.
+						</p>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="btn more">더보기<span class="ico more"></span></button>
+		</div>
+	</div>
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/common.js"></script>
+</body>
+</html>

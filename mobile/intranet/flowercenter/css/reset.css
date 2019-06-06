@@ -1,0 +1,13 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, form, fieldset, legend, textarea, p, input, button, select, table, th, td, ul, ol, li {margin:0; padding:0}
+body, button, h1, h2, h3, h4, h5, input, select, table, textarea, blockquote {line-height:1.9rem; font-family:"맑은고딕", "Malgun Gothic", sans-serif; color:#000; font-size:14px}
+body {background:#fff; word-break:break-all; -webkit-text-size-adjust:none}
+fieldset, img {border:none}
+dl, ul, ol, menu, li {list-style:none}
+table {border-collapse:collapse; border-spacing:0}
+button {border:0; background:transparent; cursor:pointer}
+input[type="text"], input[type="password"], textarea {-webkit-appearance:none; background:#f7f7f7; border:1px solid #aaa; border-radius:0}
+input[type="text"]:hover, input[type="password"]:hover, textarea:hover {background:#fff}
+a {text-decoration:none; color:inherit}
+a:active, a:hover {text-decoration:none}
+address, caption {font-style:normal}

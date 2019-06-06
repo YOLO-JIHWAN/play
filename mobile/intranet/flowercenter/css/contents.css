@@ -1,0 +1,108 @@
+
+/*** main ***/
+#container.main {background:#fff}
+.user_month_amount {background:#023a63; color:#fff; font-weight:800; text-shadow:3px 3px 0.05em #222}
+.user_month_amount p {padding:27.3px 21px 24.5px; line-height:1.875rem; font-size:1.25rem;}
+.unconfirm_list {padding:0 21px; border-top:1px solid #7d99ad}
+.unconfirm_list li {position:relative; border-top:1px solid #7d99ad}
+.unconfirm_list li:first-child {border-top:none}
+.unconfirm_list li a {display:block; padding:18.2px 0 18.9px}
+.unconfirm_list li a:before {position:absolute; top:calc(50% - 5px); right:0; content:""; display:block; width:8px; height:8px; border-top:2px solid #fff; border-right:2px solid #fff; -webkit-transform:rotate(45deg); transform:rotate(45deg); box-shadow:5px -3px 8px 0.05em rgba(0,0,0,0.5)}
+.unconfirm_list li .ico.order_num {position:absolute; top:calc(50% - 12.25px); right:24.5px; text-shadow:none;}
+/* date_amonut_count */
+.date_amount_count {padding:14px 0}
+.date_amount_count .tab_con {padding:0 21px}
+.date_amount_count .tab_con p {padding:19.25px 0; border-top:1px solid #e5e5e5}
+.date_amount_count .tab_con p:first-child {border-top:none}
+.date_amount_count .tab_con p:after {content:""; display:block; clear:both}
+.date_amount_count .tab_con p span {float:right}
+/* main-notice */
+.notice.main {padding-bottom:16px}
+.notice.main a {position:relative; box-sizing:border-box; display:block; padding:18.55px 21px; background:#c5dfe7; font-size:1.125rem; font-weight:800; text-align:left}
+.notice.main a:before {position:absolute; top:calc(50% - 4px); right:21px; content:""; display:block; width:8px; height:8px; border-top:2px solid #666; border-right:2px solid #666; -webkit-transform:rotate(45deg); transform:rotate(45deg)}
+
+/*** balju ***/
+/* subalju info */
+.product_info .subalju_info {width:100%; background:#fff}
+.product_info .subalju_info th {padding:16.75px 0 20.3px; background:#eaeaea; font-weight:400; border-bottom:2px solid #7d7d7d; border-right:2px solid #7d7d7d}
+.product_info .subalju_info tr:last-child th, .product_info .subalju_info tr:last-child td {border-bottom:none}
+.product_info .subalju_info td {text-align:center; font-weight:800; border-bottom:2px solid #7d7d7d}
+.product_info .subalju_info td label.bonbu {margin-right:31.5px}
+.product_info .subalju_info td.suju_mem p {width:100%; text-align:center}
+.product_info .subalju_info td.suju_mem p.mem span {display:inline-block; overflow:hidden; width:38.5742vw; text-overflow:ellipsis; white-space:nowrap}
+/* balju product */
+.product_info .balju_pdt select {width:48.8281vw}
+.product_info .balju_pdt .mt09 > * {float:left}
+.product_info .balju_pdt .mt09 > input[type="text"] {width:48.8281vw}
+.product_info .balju_pdt .quantity {margin-left:14px}
+.product_info .balju_pdt .quantity > * {float:left}
+.product_info .balju_pdt .quantity button {position:relative; box-sizing:border-box; width:37.8px; height:37.8px; border:1px solid #aaa; text-indent:-9999px}
+.product_info .balju_pdt .quantity button.minus {border-right:none}
+.product_info .balju_pdt .quantity button.minus:after {position:absolute; top:calc(50% - 1px); left:calc(50% - 7.875px); content:""; display:block; width:15.75px; height:2px; background:#666}
+.product_info .balju_pdt .quantity button.plus {border-left:none}
+.product_info .balju_pdt .quantity button.plus:before {position:absolute; top:calc(50% - 1px); left:calc(50% - 7.875px); content:""; display:block; width:15.75px; height:2px; background:#666}
+.product_info .balju_pdt .quantity button.plus:after {position:absolute; top:calc(50% - 7.875px); left:calc(50% - 1px); content:""; display:block; width:2px; height:15.75px; background:#666}
+.product_info .balju_pdt .quantity input[type="text"] {box-sizing:border-box; padding:5.95px 19.25px; width:52.5px; background:#fff; color:#0080ff; font-weight:800}
+/* amount */
+.items_wrap.amount input[type="text"] {width:48.8281vw}
+.items_wrap.amount .price {display:inline-block; margin-left:14px; width:54px; text-align:right}
+.items_wrap.amount .price strong {color:#0080ff}
+.items_wrap.amount .option_txt {float:right; padding-top:3px; line-height:1rem; text-align:center; font-size:0.75rem; color:#7d7d7d}
+.items_wrap.amount .option_txt span {font-weight:400}
+/* option select */
+.option_list {padding-top:9.1px}
+.option_list li {padding:8.4px 14px; border-bottom:1px solid #e5e5e5; color:#aaa}
+.option_list li:first-child {border-top:1px solid #e5e5e5}
+.option_list li:after {content:""; display:block; clear:both}
+.option_list li label {color:#aaa}
+.option_list li label.on {background:url("../images/input_chked.png") 0 0 no-repeat; background-size:17.5px; color:#000}
+.option_list li input[type="checkbox"] {position:absolute; clip:rect(0,0,0,0); overflow:hidden; margin:-1px; width:1px; height:1px}
+.option_list li input[type="text"] {padding:4.5px 14px; margin-left:42px; width:31.8359vw}
+.option_list li span {float:right; padding-top:10px}
+.option_list li span.on {color:#0080ff; font-weight:800}
+/* total */
+.items_wrap.total:after {content:""; display:block; clear:both}
+.items_wrap.total .title {display:inline-block; margin-right:20.5px; line-height:1; font-size:1rem; text-align:center; vertical-align:-8px}
+.items_wrap.total .title span {font-size:0.75rem}
+.items_wrap.total input[type="text"] {box-sizing:border-box; width:44.1406vw; text-align:right}
+.items_wrap.total .price {float:right; padding-top:12px; text-align:right}
+/* info check */
+.items_wrap.check {padding:28px 0}
+
+/* shipping info */
+.tab_con.shipping_info .table_wrap {padding:10.5px 21px 12.6px; background:#fff}
+.tab_con.shipping_info .table_wrap table {width:100%}
+.tab_con.shipping_info .table_wrap table th {text-align:left}
+.tab_con.shipping_info .table_wrap table td input[type="text"] {width:87.8318%}
+.tab_con.shipping_info .ico.balju_pdt.tel {background-position:0 15%}
+.tab_con.shipping_info .ico.balju_pdt.h_tel {background-position:0 33%}
+.tab_con.shipping_info .ico.balju_pdt.date {background-position:0 49%}
+.tab_con.shipping_info .ico.balju_pdt.time {background-position:0 66%}
+.tab_con.shipping_info .ico.balju_pdt.delivery {background-position:0 83%}
+.tab_con.shipping_info .ico.balju_pdt.receive {background-position:0 100%}
+.tab_con.shipping_info .table_wrap .select_wrap {float:left}
+.tab_con.shipping_info .table_wrap select {min-width:38.8671vw}
+.tab_con.shipping_info .table_wrap select.small {min-width:initial; width:68px}
+
+/* message */
+.tab_con.message .items_wrap .sub_tit {float:left; padding:9.9px 0}
+
+
+/* member search */
+#container.member .items_wrap {position:relative}
+.items_wrap.mem_search .option_list {padding:0; margin-top:8.75px; border:1px solid #7d7d7d; border-left:0; border-bottom:0}
+.items_wrap.mem_search .option_list li {float:left; box-sizing:border-box; padding:0; width:33.333333333%; height:37.45px; border:0; border-left:1px solid #7d7d7d; border-bottom:1px solid #7d7d7d; text-align:center; font-size:0.875rem}
+.items_wrap.mem_search .option_list li.on button {color:#0080ff}
+.items_wrap.mem_search .option_list li button {padding:9.725px 0; width:100%}
+.items_wrap.search_cdn .search_wrap {width:55.7522%}
+.items_wrap.search_cdn .map {box-sizing:border-box; width:100%; border:1px solid #000}
+.items_wrap.search_cdn .map img {width:100%; height:100%}
+.member_list ul {background:#023a63}
+.member_list li {padding:10.5px 21px 12.6px; margin-top:7px}
+.member_list li:first-child {margin-top:0}
+.member_list li > div {padding:18.55px 14px 12.6px; border:1px solid #aaa}
+.member_list .name {padding-bottom:13.3px; line-height:22.75px; border-bottom:1px solid #aaa; font-size:0.875rem}
+.member_list .ico.member {float:right}
+.member_list li table {margin:8.75px 0 5.25px; width:100%}
+.member_list li table td {line-height:1rem; font-size:0.75rem}
+#container.member .dim {padding:43.75px 0 0 21px; font-size:0.875rem; font-weight:800}

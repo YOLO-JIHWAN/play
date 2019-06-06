@@ -1,0 +1,827 @@
+#wrap {
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    position: relative;
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+#main > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mainslide {
+    width: 400%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mainslide > li {
+    width: 25%;
+    float: left;
+}
+
+#mainslide > li > img {
+    width: 100%;
+    height: 100%;
+}
+
+#quickmenu {
+    width: 84.21%;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+}
+
+#quickmenu > li {
+    width: 25%;
+    float: left;
+}
+
+#quickmenu > li:nth-child(5) {
+    width: 20%;
+}
+
+#quickmenu > li:nth-child(6) {
+    width: 20%;
+}
+
+#quickmenu > li:nth-child(7) {
+    width: 20%;
+}
+
+#quickmenu > li:nth-child(8) {
+    width: 20%;
+}
+
+#quickmenu > li:nth-child(9) {
+    width: 20%;
+}
+
+#quickmenu > li > a {
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    font-family: 'arial';
+}
+
+#quickmenu > li:hover > a {
+    color: hotpink;
+}
+
+#main_scroll {
+    width: 9%;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+}
+
+#main_scroll > img {
+    width: 100%;
+}
+
+.logo {
+    width: 11.57%;
+    height: 4.81%;
+    position: absolute;
+    left: 2.63%;
+    top: 4.62%;
+    z-index: 999;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.hiddenbg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5.26%;
+}
+
+.hiddenbg > img {
+    width: 100%;
+}
+
+.hiddenbut {
+    position: absolute;
+    left: 50%;
+    width: 1.26%;
+}
+
+.hiddenbut > img {
+    width: 100%;
+}
+
+.hiddenmenu {
+    width: 70%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    background-color: black;
+    overflow: hidden;
+    z-index: 98;
+}
+
+.hiddenmenu > li {
+    width: 11.11%;
+    float: left;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hiddenmenu > li:hover {
+    color: #ffbfbf;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    width: 22.63%;
+    height: 4.62%;
+    text-align: center;
+    font-family: 'impact';
+    font-size: 24px;
+}
+
+.sns {
+    width: 10.52%;
+    position: absolute;
+    top: 95%;
+    left: 90%;
+}
+
+.sns > li {
+    width: 12.5%;
+    float: left;
+    margin-right: 0.52%;
+}
+
+.sns > li:last-child {
+    margin-right: 0;
+}
+
+.sns > li img {
+    width: 100%;
+}
+
+.page_scroll {
+    width: 9%;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+}
+
+.page_scroll > img {
+    width: 100%;
+}
+
+#london {
+    position: relative;
+}
+
+#londonbar {
+    position: absolute;
+    transform: rotateZ(30deg);
+    background-color: #ffbfbf;
+    z-index: -999;
+}
+
+#london_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+#london_text1 {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    font-family: 'Apple Chancery';
+}
+
+.submenu {
+    opacity: 0;
+    position: absolute;
+    left: 2%;
+    top: 40%;
+}
+
+.submenu > li {
+    width: 100%;
+    position: relative;
+}
+
+.submenu > li > h3 {
+    font-size: 24px;
+    font-family: '나눔고딕';
+}
+
+.submenu > li:hover > h3 {
+    color: hotpink;
+}
+
+.submenu > li > div {
+    width: 5%;
+    height: 5px;
+    background-color: hotpink;
+    float: left;
+}
+
+#london_sub {
+    /*    background-color: aqua;*/
+    left: 2%;
+    top: 45%;
+    height: 12%;
+}
+
+#london_sub > li {
+    height: 33.33%;
+}
+#london_bouquets{
+    position: absolute;
+    width: 71.05%;
+    height: 64.81%;
+    display: none;
+}
+#london_bouquets>li{
+    width: 16.66%;
+}
+#london_bouquets>li>img{
+    width: 100%;
+}
+
+.imgbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.imgbox > img {
+    width: 100%;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+/*
+.imgbox:hover>img{
+    border: 5px solid hotpink;
+}
+*/
+
+#imgbox1_l {
+    width: 23.68%;
+    top: 0;
+    left: 0;
+}
+
+#imgbox2_l {
+    width: 31.57%;
+}
+
+#imgbox3_l {
+    width: 15.78%;
+}
+
+#nation {
+    /*    background-color: blue;*/
+}
+
+#nation_sub {
+    height: 8%;
+}
+
+#nation_sub > li {
+    height: 50%;
+}
+
+#nationbar {
+    position: absolute;
+    transform: rotateZ(-30deg);
+    background-color: #d8d7ff;
+    z-index: -998;
+    right: -40%;
+}
+
+#nation_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 65%;
+    left: 43%;
+}
+
+#nation_text1 {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 30%;
+    left: 73%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-270deg);
+}
+
+#imgbox1_n {
+    width: 15%;
+}
+
+#imgbox2_n {
+    width: 30%;
+}
+
+#imgbox3_n {
+    width: 16.5%;
+}
+
+#course {
+    /*    background-color: blueviolet;*/
+}
+
+#coursebar {
+    position: absolute;
+    transform: rotateZ(15deg);
+    background-color: #ffbfbf;
+    z-index: -997;
+    left: -50%;
+}
+
+#course_sub {
+    top: 35%;
+    height: 24%;
+}
+
+#course_sub > li {
+    16.67%;
+}
+
+#course_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 45%;
+    left: 27%;
+}
+
+#course_text1 {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 68%;
+    left: 87.5%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-270deg);
+}
+
+#imgbox1_c {
+    width: 32%;
+}
+
+#imgbox2_c {
+    width: 20%;
+}
+
+#imgbox3_c {
+    width: 15%;
+}
+
+#booking {
+    /*    background-color: aquamarine;*/
+}
+
+#bookingbar {
+    position: absolute;
+    transform: rotateZ(-35deg);
+    background-color: #d8d7ff;
+    z-index: -996;
+    right: -40%;
+}
+
+#booking_sub {
+    height: 4%;
+}
+
+#booking_sub > li {
+    height: 100%;
+}
+
+#booking_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 33%;
+    left: 63%;
+}
+
+#booking_text1 {
+    text-align: right;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 72%;
+    left: 30%;
+    font-family: 'Apple Chancery';
+}
+
+#imgbox1_b {
+    width: 42%;
+}
+
+#imgbox2_b {
+    width: 28%;
+}
+
+#about {
+    /*    background-color: brown;*/
+}
+
+#aboutbar {
+    position: absolute;
+    transform: rotateZ(15deg);
+    background-color: #d8d7ff;
+    z-index: -995;
+    left: -50%;
+}
+
+#about_sub {
+    height: 20%;
+}
+
+#about_sub > li {
+    height: 20%;
+}
+
+#about_text {
+    text-align: left;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 66%;
+    left: 32%;
+}
+
+#about_text1 {
+    text-align: right;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 44%;
+    left: 17%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-90deg);
+}
+
+#imgbox1_a {
+    width: 30%;
+}
+
+#imgbox2_a {
+    width: 40%;
+}
+
+#hotel {
+    /*    background-color: chartreuse;*/
+}
+
+#hotelbar {
+    position: absolute;
+    z-index: -994;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#hotelbar > img {
+    width: 100%;
+}
+#hotel_sub {
+    height: 4%;
+}
+
+#hotel_sub > li {
+    height: 100%;
+}
+
+#hotel_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 63%;
+    left: 69%;
+}
+
+#hotel_text > div {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    border: 3px solid white;
+}
+
+#hotel_text > div > a {
+    color: white;
+}
+
+#hotel_text1 {
+    text-align: center;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    font-size: 30px;
+    color: white;
+    top: 38%;
+    left: 70%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-270deg);
+}
+
+#imgbox1_h {
+    width: 30%;
+}
+
+#imgbox2_h {
+    width: 26%;
+}
+
+#imgbox3_h {
+    width: 21%;
+}
+#imgbox4_h{
+    width: 20%;
+}
+
+#wedding {
+    /*    background-color: cornflowerblue;*/
+}
+
+#weddingbar {
+    position: absolute;
+    z-index: -993;
+    top: 20%;
+    left: 0;
+    opacity: 0;
+}
+
+#weddingbar > img {
+    width: 100%;
+}
+
+#wedding_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 60%;
+    left: 37%;
+}
+
+#wedding_text > div {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    border: 3px solid white;
+}
+
+#wedding_text > div > a {
+    color: white;
+}
+
+#wedding_text1 {
+    text-align: center;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    font-size: 30px;
+    color: white;
+    top: 28%;
+    left: 21%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-90deg);
+    opacity: 0;
+}
+
+#imgbox1_w {
+    width: 30%;
+}
+
+#imgbox2_w {
+    width: 34%;
+}
+
+#imgbox3_w {
+    width: 28%;
+}
+
+#find {
+    /*    background-color: forestgreen;*/
+}
+
+#find_text {
+    text-align: center;
+    position: absolute;
+    width: :17.36%;
+    height: 13.88%;
+    font-size: 30px;
+    color: white;
+    top: 25%;
+    left: 64%;
+    opacity: 0;
+}
+
+#find_text > div {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    border: 3px solid white;
+    opacity: 0;
+}
+
+#find_text > div > a {
+    color: white;
+}
+
+#find_text1 {
+    text-align: center;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    font-size: 30px;
+    color: white;
+    top: 53%;
+    left: 74%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-270deg);
+    opacity: 0;
+}
+
+#imgbox1_f {
+    width: 24%;
+}
+
+#imgbox2_f {
+    width: 29%;
+}
+
+#imgbox3_f {
+    width: 25%;
+}
+
+#imgbox4_f {
+    width: 24%;
+}
+
+#letter {
+    /*    background-color: deeppink;*/
+}
+
+#imgbox1_letter {
+    width: 33%;
+}
+
+#imgbox2_letter {
+    width: 28%;
+}
+
+#imgbox3_letter {
+    width: 23%;
+}
+
+#newsletterbox {
+    position: absolute;
+    background-color: darkgrey;
+    border: 5px solid white;
+    box-sizing: border-box;
+    width: 40%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+#news_inbox {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*    background-color: red;*/
+}
+#letter_text1 {
+    text-align: center;
+    position: absolute;
+    width: 17%;
+    height: 16%;
+    font-size: 30px;
+    color: white;
+    top: 63%;
+    left: 84%;
+    font-family: 'Apple Chancery';
+    transform: rotateZ(-270deg);
+    opacity: 0;
+}
+
+#name {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    top: 10%;
+    left: 7%;
+    font-family: 'Apple Chancery';
+}
+
+#namebox {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    width: 70%;
+}
+
+#email {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 7%;
+    font-size: 24px;
+    font-family: 'Apple Chancery';
+}
+
+#emailbox {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    width: 70%;
+}
+
+#submit {
+    position: absolute;
+    border: 3px solid white;
+    box-sizing: border-box;
+    width: 18%;
+    height: 12%;
+    text-align: center;
+    top: 78%;
+    left: 72%;
+}
+
+#submit > a {
+    color: white;
+    font-family: 'impact';
+    font-size: 24px;
+}
+
+#top_scroll {
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    cursor: pointer;
+}
+h2{
+    font-weight: 300;
+}

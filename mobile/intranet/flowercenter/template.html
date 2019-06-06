@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>전국플라워센터-template</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/contents.css">
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="전국플라워센터">
+					</a>
+				</h1>
+				<button type="button" onclick="history.back();" class="btn prev">이전 페이지로 이동</button>
+				<button type="button" onclick="unb_click();" class="btn unb">사용자 메뉴</button>
+			</div>
+
+			<article class="menu">
+				<!-- 비활성화시 -->
+				<ul>
+					<li class="home"><a href="#"><span>홈</span></a></li>
+					<li class="balju_list"><a href="#"><span>발주리스트</span></a></li>
+					<li class="suju_list"><a href="#"><span>수주리스트</span></a></li>
+					<li class="balju"><a href="#"><span>발주</span></a></li>
+				</ul>
+
+				<!-- 활성화시 -->
+				<ul>
+					<li class="home"><strong title="현재메뉴"><span>홈</span></strong></li>
+					<li class="balju_list"><strong title="현재메뉴"><span>발주리스트</span></strong></li>
+					<li class="suju_list"><strong title="현재메뉴"><span>수주리스트</span></strong></li>
+					<li class="balju"><strong title="현재메뉴"><span>발주</span></strong></li>
+				</ul>
+			</article>
+		</header>
+		<aside class="unb layer" style="display:none">
+			<div class="inner">
+				<h2 class="ir">사용자 메뉴 목록</h2>
+				<ul>
+					<li class="home">
+						<a href="#">로그아웃</a>
+					</li>
+					<li class="pc">
+						<a href="#">PC 버전</a>
+					</li>
+					<li class="notice">
+						<a href="#">공지사항</a>
+					</li>
+					<li class="head">
+						<a href="#">본부 전화</a>
+					</li>
+				</ul>
+				<article class="app_down">
+					<a href="#">
+						<strong>모바일 앱 설치하기</strong>
+						<img src="images/ico_app.png" alt="전국플라워센터 모바일 앱 설치">
+						APP을 설치하시면 자동으로<br>수주할당을 받으실 수 있습니다.<br>(희망배송지 주변 기준)
+					</a>
+				</article>
+				<button type="button" onclick="unb_click();" class="btn close">사용자 메뉴 닫기</button>
+			</div>
+			<div class="overlay"></div>
+		</aside>
+		<!-- 메인 -->
+		<div id="container">
+			<article class="user_month_amount">
+				<p>
+					홍길동플라워 정산금액 &lt;12월&gt;<br>
+					100,000,000원
+				</p>
+				<ul class="unconfirm_list">
+					<li>
+						<a href="suju/suju_list.html">
+							미확인 주문
+							<strong class="ico order_num"><span class="txt_red">1</span>건</strong>
+						</a>
+					</li>
+					<li>
+						<a href="suju/suju_list.html">
+							미배송 주문
+							<strong class="ico order_num"><span class="txt_red">11</span>건</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							배송사진 미등록 주문
+							<strong class="ico order_num"><span class="txt_red">0</span>건</strong>
+						</a>
+					</li>
+				</ul>
+			</article>
+
+			<article class="date_amount_count">
+				<ul class="tab">
+					<li class="tab_link">
+						<button type="button" onclick="openTab(event, 'tab1');">탭1</button>
+					</li>
+					<li class="tab_link">
+						<button type="button" onclick="openTab(event, 'tab2');">탭2</button>
+					</li>
+					<li class="tab_link">
+						<button type="button" onclick="openTab(event, 'tab3');">탭3</button>
+					</li>
+					<li class="tab_link">
+						<button type="button" onclick="openTab(event, 'tab4');">탭4</button>
+					</li>
+					<div class="tab_slider">현재메뉴 표시</div>
+				</ul>
+				<div id="tab1" class="tab_con" style="display:block">
+					<p>탭1 내용</p>
+				</div>
+
+				<div id="tab2" class="tab_con">
+					<p>탭2 내용</p>
+					<p>탭2 내용</p>
+				</div>
+				<div id="tab3" class="tab_con">
+					<p>탭3 내용</p>
+					<p>탭3 내용</p>
+					<p>탭3 내용</p>
+				</div>
+					
+				<div id="tab4" class="tab_con">
+					<p>탭4 내용</p>
+				</div>
+			</article>
+
+			<article class="notice main">
+				<a href="board/notice_list.html">
+					공지사항<span class="ico new">NEW</span>
+				</a>
+			</article>
+			
+			<div class="items_wrap">
+				<button type="button" class="btn basic">테스트</button>
+				<button type="button" class="btn basic">이미지검색</button>
+				<div class="pdt_amount" style="margin:5px 0">
+					<button type="button" class="btn basic">10만</button>
+					<button type="button" class="btn basic">5만</button>
+					<button type="button" class="btn basic">1만</button>
+					<button type="button" class="btn basic">5천</button>
+					<button type="button" class="btn basic">정정</button>
+				</div>
+				<button type="button" class="btn choice">선택</button>
+			</div>
+
+			<div class="items_wrap">
+				<article class="select_wrap">
+					<select name="" title="" onchange="changeBg_select(this)">
+						<option value="" selected>선택</option>
+						<option value="">셀렉트 옵션1</option>
+						<option value="">셀렉트 옵션2</option>
+						<option value="">셀렉트 옵션3</option>
+						<option value="">셀렉트 옵션4</option>
+					</select>
+				</article>
+				
+				<article class="select_wrap delivery">
+					<select name="" title="배송상태" onchange="changeBg_select(this)">
+						<option value="" selected>선택</option>
+						<option value="" style="background:#fcbdc5">미확인</option>
+						<option value="" style="background:#f5f1cc">주문접수</option>
+						<option value="" style="background:#d5efd4">배송중</option>
+						<option value="" style="background:#f5f0f6">배송완료</option>
+					</select>
+				</article>
+			</div>
+			<div class="items_wrap clear">
+				<article class="select_wrap year">
+					<select name="" title="년도선택">
+						<option value="">2017 년</option>
+						<option value="">2018 년</option>
+						<option value="" selected="selected">2019 년</option>
+					</select>
+				</article>
+				<article class="select_wrap month">
+					<select name="" title="월선택">
+						<option value="">1 월</option>
+						<option value="">2 월</option>
+						<option value="">3 월</option>
+						<option value="">4 월</option>
+						<option value="">5 월</option>
+						<option value="">6 월</option>
+						<option value="">7 월</option>
+						<option value="">8 월</option>
+						<option value="">9 월</option>
+						<option value="">10 월</option>
+						<option value="">11 월</option>
+						<option value="">12 월</option>
+					</select>
+				</article>
+				<button type="button" class="btn basic shadow fr">상세검색</button>
+			</div>
+			<div class="items_wrap img_search mt07">
+				<span class="ico dica">이미지검색</span>
+				<label class="btn basic">
+					<input type="file" name=""> 이미지검색
+				</label>
+				<input type="text" readonly="readonly" placeholder="상품이미지URL">
+				<!-- 이미지가 등록되었을시 display:block -->
+				<div class="img_preview" style="display:none">
+					<img src="#" alt="상품이미지 preview" id="imgPreview" style="display:block">
+					<button type="button" class="btn close">닫기</button>
+				</div>
+			</div>
+			<div class="items_wrap" style="position:relative">
+				<div class="search_wrap">
+					<input type="text" name="" value="" placeholder="테스트">
+					<button type="button" class="btn search">검색</button>
+				</div>
+			</div>
+			<div class="items_wrap">
+				<label class="chk">
+					<input type="checkbox" name="" value=""> 체크박스
+				</label>
+			</div>
+
+			<div class="option"> 
+				<label><input type="radio" name="test" value="">옵션 있음<span class="ico down_arrow"></span></label>
+				<label><input type="radio" name="test" value="">옵션 없음</label>
+			</div>
+
+			<button type="button" class="btn move"><span class="ico triangle"></span>다음</button>
+			<button type="button" class="btn move blue"><span class="ico triangle"></span>다음</button>
+			<div class="paging">
+				<button type="button" class="btn move prev v2">이전<span class="ico triangle"></span></button>
+				<button type="button" class="btn move next v2"><span class="ico triangle"></span>다음</button>
+			</div>
+			<div class="paging">
+				<button type="button" class="btn move prev v2">이전<span class="ico triangle"></span></button>
+				<button type="button" class="btn move next blue v2"><span class="ico triangle"></span>다음</button>
+			</div>
+			<div class="paging">
+				<button type="button" class="btn move prev v2">이전<span class="ico triangle"></span></button>
+				<button type="button" class="btn move red v2">발주</button>
+			</div>
+			<div class="paging">
+				<button type="button" class="btn move v2">취소</button>
+				<button type="button" class="btn move blue v2">확인</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

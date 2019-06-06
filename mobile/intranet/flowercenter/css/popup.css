@@ -1,0 +1,35 @@
+#wrap.popup {width:100%; height:100vh}
+#wrap.popup #container {height:100%}
+/* member info */
+.dim_bg {position:absolute; width:100%; height:100%; overflow:hidden}
+.dim_bg li {margin-top:7px; height:117.25px}
+.dim_bg li:first-child {margin-top:0}
+#wrap.popup .mem_info_content {position:absolute; top:0; right:0; bottom:0; box-sizing:border-box; padding:56px 21px 0 21px; width:calc(100vw - 21px); height:100%; background:#fff}
+#wrap.popup .mem_info_content table {width:100%}
+#wrap.popup .mem_info_content tr {border-top:1px solid #e5e5e5}
+#wrap.popup .mem_info_content th {text-align:left}
+#wrap.popup .mem_info_content td {line-height:1.422rem}
+#wrap.popup .mem_info_content .ico.meminfo.name {background-position:0 14%}
+#wrap.popup .mem_info_content .ico.meminfo.tel {background-position:0 28%}
+#wrap.popup .mem_info_content .ico.meminfo.handtel {background-position:0 42%}
+#wrap.popup .mem_info_content .ico.meminfo.fax {background-position:0 57%}
+#wrap.popup .mem_info_content .ico.meminfo.address {background-position:0 70%}
+#wrap.popup .mem_info_content .ico.meminfo.intro {background-position:0 85%}
+#wrap.popup .mem_info_content .ico.meminfo.pdt {background-position:0 100%}
+#wrap.popup .mem_info_content .recent_pdt {width:100%}
+#wrap.popup .mem_info_content .recent_pdt:after {content:""; display:block; clear:both}
+#wrap.popup .mem_info_content .recent_pdt li {float:left; margin-left:25.55px}
+#wrap.popup .mem_info_content .recent_pdt li:first-child {margin-left:0}
+#wrap.popup .mem_info_content .btn.close {top:2px; right:10px}
+
+/* product image search */
+#container.pdt_image {background:#fff url("../images/bg_pdtImage_search.png") 0 0 no-repeat; background-size:360px}
+.pdt_content {position:absolute; top:0; right:0; box-sizing:border-box;  padding:28px 21px; width:calc(100vw - 21px); height:100%; background:#fff; z-index:1}
+.pdt_content h2 {font-size:1.125rem}
+.pdt_content .search_wrap {margin:12.95px 0 14px;}
+.pdt_content .btn.close {top:2px; right:10px}
+.pdt_content .pdt_image_list {display:flex; flex-wrap:wrap; justify-content:space-between}
+.pdt_content li {position:relative; margin-bottom:4.9px; width:49.1706%; border:1px solid #aaa}
+.pdt_content li img {width:100%; height:100%}
+.pdt_content li p {position:absolute; top:119.35px; left:0; width:100%; text-align:center}
+.pdt_content li .pdt_name {display:inline-block; padding:3.5px 14px; border-radius:7px; background:rgba(0,0,0,0.3); color:#fff; font-size:0.75rem; font-weight:800}

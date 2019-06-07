@@ -1,6 +1,6 @@
 @import "../css/reset.css";
 /* layout */
-body {position:relative; width:100%; background:#212121; color:#fff; font-size:12px; font-family: 'Noto Sans KR', sans-serif}
+body {position:relative; width:100%; background:#212121; color:#fff; font-size:12px; font-family:'Nanum Gothic', sans-serif}
 a, a:visited {color:#fff; text-decoration:none}
 #wrap {position:relative; width:100%; height:100%}
 /* 
@@ -23,11 +23,14 @@ header.scroll {background:#fff}
 .logo a {display:block; height:100%}
 .logo span {display:block; margin-top:15px; width:25px; height:30px; background:url("../img/common/SINGLE_LOGO\(BLACK\).svg") 0 0 no-repeat; background-size:25px; text-indent:-9999px}
 header.scroll .logo span {background:url("../img/common/SINGLE_LOGO\(WHITE\).svg") 0 0 no-repeat}
-.nav {float:right; font-family:"Open Sans", sans-serif; font-weight:800; text-transform:uppercase}
+.nav {float:right; margin-top:14px; font-family:"Open Sans", sans-serif; font-weight:800; text-transform:uppercase}
 .nav li {float:left; text-align:center; font-size:16px; font-weight:500}
-.nav li a {display:block; padding:5px 10px; line-height:50px}
+.nav li a {display:block; padding:5px 10px}
+.nav li a:after {content:""; display:block; margin-top:4px; width:0; height:2px; background:#fff; transition:0.5s}
+.nav li a:hover:after {width:100%}
+.nav li.on a:after {width:100%}
 /* main */
-#content {position:relative; box-sizing:border-box; padding:0 20px}
+#content {position:relative; box-sizing:border-box}
 #content .home {position:relative; width:100%; text-align:center}
 #content .home h2 {line-height:100vh; font-family:'Ubuntu', sans-serif; font-size:1.8rem}
 .scroll_down {position:absolute; bottom:50px; left:50%; transform:translateX(-50%)}
@@ -43,5 +46,12 @@ header.scroll .logo span {background:url("../img/common/SINGLE_LOGO\(WHITE\).svg
 	100% {opacity:1}
 }
 
+/* work */
+.work {padding:10px 20px; background:#fff; color:#212121}
+.work h2 {font-size:2rem}
+.work .filter {padding:10px 0}
+.work .filter:after {content:""; display:block; clear:both}
+.work .filter li {float:left; margin-right:5px}
+.work .filter li button {padding:5px 10px; border:1px solid #212121; border-radius:12px; font-weight:600}
 /* footer */
-footer {padding:15px 0; border-top:1px solid #555; text-align:center; font-family: 'Nanum Gothic', sans-serif; font-weight:400}
+footer {padding:15px 0; border-top:1px solid #555; text-align:center; font-weight:400}
